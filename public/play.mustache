@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1>Play</h1>
+
+    {{#spaces}}
+    <span>{{.}}</span> {{/spaces}}
+    <form action="/guess" method="post">
+        <input type="text" name="guess">
+        <input type="submit">
+    </form>
+
+    {{#guesses}}
+    <span>{{.}}</span> {{/guesses}}
+
+
+
+
+
+
+
+</body>
+
+</html>
