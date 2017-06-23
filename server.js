@@ -35,6 +35,7 @@ var wrong = [];
 var right = [];
 var lose;
 var rightWord;
+var tries = "8";
 
 app.get("/", function(req, res) {
   // console.log(randomWord.length);
@@ -68,7 +69,7 @@ app.get("/again", function(req, res) {
 
 app.post("/guess", function(req, res) {
   var guess = req.body.guess;
-  if (wrong.length < 8) {
+  if (wrong.length < 7) {
     guesses.push(guess);
     console.log(req.body.guess);
     if (theWord.indexOf(guess) > -1) {
@@ -81,6 +82,8 @@ app.post("/guess", function(req, res) {
       }
     } else {
       wrong.push(guess);
+      tries -= "1";
+      console.log(tries);
     }
   } else {
     console.log("you lose");
@@ -96,7 +99,12 @@ app.post("/guess", function(req, res) {
 
   console.log(wrong);
 
-  res.render("play", { guesses: guesses, spaces: spaces, lose: lose });
+  res.render("play", {
+    guesses: guesses,
+    spaces: spaces,
+    lose: lose,
+    tries: tries
+  });
 });
 
 app.listen(port, function() {

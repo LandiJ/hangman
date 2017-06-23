@@ -1,0 +1,23 @@
+body {
+    background-color: darkblue;
+}
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+    color: aqua;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.spaces {
+    text-align: center;
+    color: aqua;
+    border: 1px solid aqua;
+    margin: auto;
+    margin-bottom: 70px;
+    padding: 50px;
+}
+
+.letters {
+    font-size: 30px;
+}
