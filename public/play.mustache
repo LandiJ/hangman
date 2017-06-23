@@ -20,7 +20,12 @@
     </form>
 
     {{#guesses}}
-    <span>{{.}}</span> {{/guesses}}
+    <span>{{.}}</span> {{/guesses}} {{#lose}}
+    <p>YOU LOSE</p>
+    {{/lose}}
+
+
+    <a href="/again">Try Again</a>
 
 
 
