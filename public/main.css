@@ -1,5 +1,6 @@
 body {
     background-color: darkblue;
+    text-align: center;
 }
 
 h1 {
@@ -7,6 +8,7 @@ h1 {
     font-size: 60px;
     color: aqua;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 5px 5px black;
 }
 
 .spaces {
@@ -16,8 +18,91 @@ h1 {
     margin: auto;
     margin-bottom: 70px;
     padding: 50px;
+    border-radius: 10px;
 }
 
 .letters {
     font-size: 30px;
+}
+
+form {
+    text-align: center;
+}
+
+.input {
+    padding-top: 20px;
+    border-radius: 10px;
+    font-size: 30px;
+}
+
+.submit {
+    border: none;
+    background-color: aqua;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#tries {
+    font-size: 20px;
+    text-align: center;
+    color: aqua
+}
+
+#lose {
+    font-size: 5rem;
+    text-align: center;
+    color: red;
+}
+
+#win {
+    font-size: 8rem;
+    text-align: center;
+    color: aqua;
+    text-shadow: 5px 5px black;
+    position: relative;
+    bottom: 4rem;
+}
+
+#play {
+    text-decoration: none;
+    background-color: aqua;
+    border-radius: 10px;
+    padding: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: darkblue;
+}
+
+#button {
+    margin-top: 10rem;
+}
+
+.tryButton {
+    text-decoration: none;
+    font-size: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: aqua;
+    color: darkblue;
+    padding: 30px;
+    margin-top: 15rem;
+    border-radius: 10px;
+}
+
+.tryAgain {
+    margin-top: 5rem;
+}
+
+#guesses {
+    font-size: 35px;
+    text-align: center;
+    color: aqua
+}
+
+#youGuessed {
+    font-size: 35px;
+    text-align: center;
+    color: aqua;
+    margin-bottom: 30px;
 }

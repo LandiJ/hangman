@@ -10,27 +10,40 @@
 
 <body>
 
-    <h1>Play</h1>
+    <h1>Let's Play!</h1>
+
+
+    {{^win}} {{#tries}}
+    <p id="tries">You have {{.}} tries</p>
+
+    {{/tries}}
+    <span id="youGuessed"> You Guessed: {{#guesses}}  <span id="guesses">{{.}}</span> {{/guesses}}</span>
+
+
     <div class="spaces">
         {{#spaces}}
         <span class="letters">{{.}}</span> {{/spaces}}
     </div>
-
+    {{/win}} {{^win}}
     <form action="/guess" method="post">
-        <input type="text" name="guess">
-        <input type="submit">
+        <input pattern="[A-Za-z]" autofocus="autofocus" max-length="1" class="input" type="text" name="guess">
+        <input type="submit" class="submit">
     </form>
 
-    {{#guesses}}
-    <span>{{.}}</span> {{/guesses}} {{#lose}}
-    <p>YOU LOSE</p>
-    {{/lose}} {{#tries}}
-    <p>you have{{.}}tries</p>
 
-    {{/tries}}
+    {{/win}} {{#lose}}
+    <p id="lose">YOU LOSE!</p>
+    {{/lose}} {{#win}}
+
+    <p id="win">YOU WIN!!!!!!!!</p>{{/win}} {{#tooLong}}
+    <p>One letter only please!</p>
+    {{/tooLong}}
 
 
-    <a href="/again">Try Again</a>
+
+    <div class="tryAgain">
+        <a class="tryButton" href=" /again ">Try Again</a>
+    </div>
 
 
 
